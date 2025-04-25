@@ -9,15 +9,17 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #121212;
+      background: #0e0e0e;
       color: #e0e0e0;
+      line-height: 1.6;
     }
     header {
-      background: #000;
+      background: linear-gradient(90deg, #000000, #222222);
       color: #fff;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 4rem;
       text-align: center;
       position: relative;
+      border-bottom: 2px solid #ffd600;
     }
     header img {
       max-width: 150px;
@@ -27,16 +29,18 @@
       transform: translateY(-50%);
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin: 0;
+      font-weight: 700;
     }
     header p {
       margin-top: 0.5rem;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      color: #ffea00;
     }
     section {
-      padding: 2rem;
-      max-width: 1000px;
+      padding: 2rem 1rem;
+      max-width: 1100px;
       margin: auto;
     }
     h2 {
@@ -44,48 +48,60 @@
       font-size: 2rem;
       margin: 2rem 0 1rem;
       border-left: 5px solid #ffea00;
-      padding-left: 10px;
+      padding-left: 12px;
     }
     .services li {
       margin: 10px 0;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       list-style: none;
     }
     .services li::before {
       content: '✔️';
-      margin-right: 8px;
+      margin-right: 10px;
       color: #00e676;
     }
     .contact-info {
-      background: #1e1e1e;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(255,255,255,0.05);
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 16px rgba(255,255,255,0.08);
+      transition: background 0.3s;
+    }
+    .contact-info:hover {
+      background: #202020;
     }
     footer {
       background: #000;
       color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 1.5rem 1rem;
       font-size: 0.9rem;
+      border-top: 1px solid #333;
     }
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
       justify-content: center;
+    }
+    .gallery-item {
+      text-align: center;
     }
     .gallery img {
       width: 100%;
-      max-width: 300px;
-      height: auto;
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .gallery img:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(255, 214, 0, 0.3);
+    }
+    .gallery label {
+      display: block;
+      margin-top: 0.5rem;
+      color: #ffea00;
+      font-weight: 500;
     }
     .qr-section {
       text-align: center;
@@ -106,6 +122,23 @@
     a:hover {
       text-decoration: underline;
     }
+    .enquiry {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .enquiry a {
+      display: inline-block;
+      background-color: #00c853;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .enquiry a:hover {
+      background-color: #00e676;
+    }
   </style>
 </head>
 <body>
@@ -118,25 +151,87 @@
   <section>
     <h2>Our Services</h2>
     <ul class="services">
+      <li>Flex Printing</li>
       <li>Vinyl Printing</li>
       <li>Clear Printing</li>
       <li>Reflective Flex and Vinyl Printing</li>
+      <li>One Way Vision Vinyl Printing</li>
+      <li>Backlit Film Printing</li>
       <li>Sunpack Sheet Printing</li>
-      <li>Photo Frame Services</li>
       <li>Foam Board Printing</li>
+      <li>UV Printing Services</li>
+      <li>Standee Banner</li>
+      <li>Frosted Vinyl Printing</li>
+      <li>Photo Frame Services</li>
       <li>Lamination - Glossy and Matte</li>
+    </ul>
+  </section>
+
+  <!-- 🔥 New Section Added -->
+  <section>
+    <h2>Why Choose Us</h2>
+    <ul class="services">
+      <li>🚚 Fast & Free Delivery within City Limit</li>
+      <li>🖨️ High-Quality Prints with Durable Materials</li>
+      <li>🎨 Custom Design Support for All Projects</li>
     </ul>
   </section>
 
   <section>
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="https://imgur.com/Uy2QVeH.png" alt="Vinyl Print Sample">
-      <img src="https://imgur.com/TKrqhXT.png" alt="Sunpack Sheet Sample">
-      <img src="https://imgur.com/8pVx3zu.png" alt="Vinyl Cutting Machine">
-      <img src="https://imgur.com/5guGqZf.png" alt="Photo Frame Sample">
-      <img src="https://imgur.com/ffILX8W.png" alt="Foam Board Printing Sample">
-      <img src="https://imgur.com/gpM1fM5.png" alt="Lamination Sample">
+      <div class="gallery-item">
+        <img src="https://imgur.com/6dJbKWN.png" alt="Flex Printing">
+        <label>Flex Printing</label>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imgur.com/Uy2QVeH.png" alt="Vinyl Printing">
+        <label>Vinyl Printing</label>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imgur.com/STqQmqA.png" alt="Clear Printing">
+        <label>Clear Printing</label>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imgur.com/H70lmeX.png" alt="Reflective Flex and Vinyl Printing">
+        <label>Reflective Flex and Vinyl Printing</label>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imgur.com/E4rXNob.png" alt="One Way Vision Vinyl Printing">
+        <label>One Way Vision Vinyl Printing</label>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imgur.com/GeyVmxT.png" alt="Backlit Film Printing">
+        <label>Backlit Film Printing</label>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imgur.com/TKrqhXT.png" alt="Sunpack Sheet Printing">
+        <label>Sunpack Sheet Printing</label>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imgur.com/ffILX8W.png" alt="Foam Board Printing">
+        <label>Foam Board Printing</label>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imgur.com/59lDmKC.png" alt="UV Printing Services">
+        <label>UV Printing Services</label>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imgur.com/zsBQCXc.png" alt="Standee Banner">
+        <label>Standee Banner</label>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imgur.com/GrGZT5x.png" alt="Frosted Vinyl Printing">
+        <label>Frosted Vinyl Printing</label>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imgur.com/5guGqZf.png" alt="Photo Frame Services">
+        <label>Photo Frame Services</label>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imgur.com/Xx74HPu.png" alt="Lamination Glossy Matte">
+        <label>Lamination - Glossy and Matte</label>
+      </div>
     </div>
   </section>
 
@@ -144,6 +239,12 @@
     <h2>Scan to Connect on WhatsApp</h2>
     <img src="https://imgur.com/4DKqyAH.png" alt="WhatsApp QR Code">
     <p><a href="https://wa.me/message/3QMRZWYXTUTLD1" target="_blank">Or click here to chat directly</a></p>
+  </section>
+
+  <section class="enquiry">
+    <h2>Customer Enquiry</h2>
+    <a href="https://wa.me/message/3QMRZWYXTUTLD1" target="_blank">Message on WhatsApp</a>
+    <a href="mailto:signhousemdu@gmail.com">Send Email</a>
   </section>
 
   <section>
@@ -154,7 +255,8 @@
       <p><strong>Office Mobile:</strong> <a href="tel:8838956685">8838956685</a></p>
       <p><strong>Phone:</strong> <a href="tel:8012920424">8012920424</a></p>
       <p><strong>WhatsApp:</strong> <a href="https://wa.me/message/3QMRZWYXTUTLD1">Chat Now</a></p>
-      <p><strong>Address:</strong> No.9/4, SR Nagar Street, Villapuram, Madurai</p>
+      <p><strong>Google Profile:</strong> <a href="https://g.co/kgs/SMRgoC5" target="_blank">View on Google</a></p>
+      <p><strong>Address:</strong> No.9/4, SR Nagar Street Last, Opp HP Petrol Bunk, Villapuram, Meenakshi Nagar, Madurai - 625012.</p>
     </div>
   </section>
 
