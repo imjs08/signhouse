@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIGN HOUSE - Flex Printing Services</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #121212;
+      color: #e0e0e0;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+    header img {
+      max-width: 150px;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #ffd600;
+      font-size: 2rem;
+      margin: 2rem 0 1rem;
+      border-left: 5px solid #ffea00;
+      padding-left: 10px;
+    }
+    .services li {
+      margin: 10px 0;
+      font-size: 1.1rem;
+      list-style: none;
+    }
+    .services li::before {
+      content: '✔️';
+      margin-right: 8px;
+      color: #00e676;
+    }
+    .contact-info {
+      background: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.05);
+    }
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .qr-section {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .qr-section img {
+      max-width: 240px;
+      width: 100%;
+      border: 4px solid #ffd600;
+      border-radius: 12px;
+      padding: 8px;
+      background: #1e1e1e;
+    }
+    a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://imgur.com/piIeiwp.png" alt="SIGN HOUSE Logo">
+    <h1>SIGN HOUSE</h1>
+    <p>Professional Flex Printing Services in Madurai</p>
+  </header>
+
+  <section>
+    <h2>Our Services</h2>
+    <ul class="services">
+      <li>Vinyl Printing</li>
+      <li>Clear Printing</li>
+      <li>Reflective Flex and Vinyl Printing</li>
+      <li>Sunpack Sheet Printing</li>
+      <li>Photo Frame Services</li>
+      <li>Foam Board Printing</li>
+      <li>Lamination - Glossy and Matte</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://imgur.com/Uy2QVeH.png" alt="Vinyl Print Sample">
+      <img src="https://imgur.com/TKrqhXT.png" alt="Sunpack Sheet Sample">
+      <img src="https://imgur.com/8pVx3zu.png" alt="Vinyl Cutting Machine">
+      <img src="https://imgur.com/5guGqZf.png" alt="Photo Frame Sample">
+      <img src="https://imgur.com/ffILX8W.png" alt="Foam Board Printing Sample">
+      <img src="https://imgur.com/gpM1fM5.png" alt="Lamination Sample">
+    </div>
+  </section>
+
+  <section class="qr-section">
+    <h2>Scan to Connect on WhatsApp</h2>
+    <img src="https://imgur.com/4DKqyAH.png" alt="WhatsApp QR Code">
+    <p><a href="https://wa.me/message/3QMRZWYXTUTLD1" target="_blank">Or click here to chat directly</a></p>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:signhousemdu@gmail.com">signhousemdu@gmail.com</a></p>
+      <p><strong>Office Landline:</strong> <a href="tel:04524206419">0452 4206419</a></p>
+      <p><strong>Office Mobile:</strong> <a href="tel:8838956685">8838956685</a></p>
+      <p><strong>Phone:</strong> <a href="tel:8012920424">8012920424</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/message/3QMRZWYXTUTLD1">Chat Now</a></p>
+      <p><strong>Address:</strong> No.9/4, SR Nagar Street, Villapuram, Madurai</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SIGN HOUSE | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
