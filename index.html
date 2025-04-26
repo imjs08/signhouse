@@ -4,50 +4,91 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SIGN HOUSE - Flex Printing Services</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="SIGN HOUSE provides high-quality flex printing, vinyl printing, sunpack sheet printing, and photo frame services in Madurai. Contact us for best flex printing!">
+  <meta name="keywords" content="Flex Printing Madurai, Vinyl Printing Madurai, Sunpack Sheet Printing, Photo Frame Services, Flex Banner, Sign House Printing">
+  <meta name="author" content="SIGN HOUSE">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (for WhatsApp / Facebook preview) -->
+  <meta property="og:title" content="SIGN HOUSE - Flex Printing Services in Madurai">
+  <meta property="og:description" content="Professional Flex and Vinyl Printing Services. Fast Delivery. Contact us today!">
+  <meta property="og:image" content="https://imgur.com/piIeiwp.png">
+  <meta property="og:url" content="https://g.co/kgs/vSe67Se">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="https://imgur.com/piIeiwp.png" type="image/png">
+
   <style>
+    :root {
+      --primary: #ffd600;
+      --accent: #ffea00;
+      --bg-gradient: linear-gradient(135deg, #1f1c2c, #928dab);
+    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #0e0e0e;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-gradient);
+      background-attachment: fixed;
+      background-size: cover;
       color: #e0e0e0;
-      line-height: 1.6;
     }
     header {
-      background: linear-gradient(90deg, #000000, #222222);
-      color: #fff;
-      padding: 2rem 1rem 4rem;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 5rem 1rem 3rem;
       text-align: center;
       position: relative;
-      border-bottom: 2px solid #ffd600;
+      border-bottom: 2px solid var(--primary);
+      overflow: hidden;
     }
-    header img {
-      max-width: 150px;
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
+    .logo-center {
+      display: block;
+      margin: 0 auto;
+      margin-top: -60px;
+      max-width: 120px;
+      background: #000;
+      padding: 10px;
+      border-radius: 50%;
+      animation: zoomIn 1s ease-out;
     }
-    header h1 {
-      font-size: 2.8rem;
-      margin: 0;
+    .header-text {
+      animation: fadeIn 1.5s ease-in;
+      margin-top: 1rem;
+    }
+    .header-text h1 {
+      font-size: 2.4rem;
+      margin: 1rem 0 0.5rem;
       font-weight: 700;
     }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-      color: #ffea00;
+    .header-text p {
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin: 0;
+    }
+    @keyframes zoomIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
     section {
       padding: 2rem 1rem;
       max-width: 1100px;
       margin: auto;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      animation: fadeIn 1s ease-in;
     }
     h2 {
-      color: #ffd600;
+      color: var(--primary);
       font-size: 2rem;
       margin: 2rem 0 1rem;
-      border-left: 5px solid #ffea00;
+      border-left: 5px solid var(--accent);
       padding-left: 12px;
     }
     .services li {
@@ -60,32 +101,11 @@
       margin-right: 10px;
       color: #00e676;
     }
-    .contact-info {
-      background: #1a1a1a;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 16px rgba(255,255,255,0.08);
-      transition: background 0.3s;
-    }
-    .contact-info:hover {
-      background: #202020;
-    }
-    footer {
-      background: #000;
-      color: white;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.9rem;
-      border-top: 1px solid #333;
-    }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
       justify-content: center;
-    }
-    .gallery-item {
-      text-align: center;
     }
     .gallery img {
       width: 100%;
@@ -95,12 +115,13 @@
     }
     .gallery img:hover {
       transform: scale(1.03);
-      box-shadow: 0 8px 20px rgba(255, 214, 0, 0.3);
+      box-shadow: 0 8px 20px rgba(255,214,0,0.3);
     }
     .gallery label {
       display: block;
       margin-top: 0.5rem;
-      color: #ffea00;
+      text-align: center;
+      color: var(--accent);
       font-weight: 500;
     }
     .qr-section {
@@ -110,7 +131,7 @@
     .qr-section img {
       max-width: 240px;
       width: 100%;
-      border: 4px solid #ffd600;
+      border: 4px solid var(--primary);
       border-radius: 12px;
       padding: 8px;
       background: #1e1e1e;
@@ -123,8 +144,8 @@
       text-decoration: underline;
     }
     .enquiry {
-      margin-top: 2rem;
       text-align: center;
+      margin-top: 2rem;
     }
     .enquiry a {
       display: inline-block;
@@ -139,129 +160,128 @@
     .enquiry a:hover {
       background-color: #00e676;
     }
+    .contact-info {
+      background: rgba(30,30,30,0.8);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 16px rgba(255,255,255,0.08);
+      transition: background 0.3s;
+    }
+    .contact-info:hover {
+      background: rgba(40,40,40,0.9);
+    }
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+      color: #fff;
+      border-top: 1px solid #333;
+    }
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
+      header {
+        padding: 3rem 1rem 2rem;
+      }
+      .logo-center {
+        max-width: 90px;
+        margin-top: -40px;
+      }
+      .header-text h1 {
+        font-size: 2rem;
+      }
+      .header-text p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <img src="https://imgur.com/piIeiwp.png" alt="SIGN HOUSE Logo">
+
+<header>
+  <img class="logo-center" src="https://imgur.com/piIeiwp.png" alt="SIGN HOUSE Logo">
+  <div class="header-text">
     <h1>SIGN HOUSE</h1>
     <p>Professional Flex Printing Services in Madurai</p>
-  </header>
+  </div>
+</header>
 
-  <section>
-    <h2>Our Services</h2>
-    <ul class="services">
-      <li>Flex Printing</li>
-      <li>Vinyl Printing</li>
-      <li>Clear Printing</li>
-      <li>Reflective Flex and Vinyl Printing</li>
-      <li>One Way Vision Vinyl Printing</li>
-      <li>Backlit Film Printing</li>
-      <li>Sunpack Sheet Printing</li>
-      <li>Foam Board Printing</li>
-      <li>UV Printing Services</li>
-      <li>Standee Banner</li>
-      <li>Frosted Vinyl Printing</li>
-      <li>Photo Frame Services</li>
-      <li>Lamination - Glossy and Matte</li>
-    </ul>
-  </section>
+<section>
+  <h2>Our Services</h2>
+  <ul class="services">
+    <li>Flex Printing</li>
+    <li>Vinyl Printing</li>
+    <li>Clear Printing</li>
+    <li>Reflective Flex and Vinyl Printing</li>
+    <li>One Way Vision Vinyl Printing</li>
+    <li>Backlit Film Printing</li>
+    <li>Sunpack Sheet Printing</li>
+    <li>Foam Board Printing</li>
+    <li>UV Printing Services</li>
+    <li>Standee Banner</li>
+    <li>Frosted Vinyl Printing</li>
+    <li>Photo Frame Services</li>
+    <li>Lamination - Glossy and Matte</li>
+  </ul>
+</section>
 
-  <!-- 🔥 New Section Added -->
-  <section>
-    <h2>Why Choose Us</h2>
-    <ul class="services">
-      <li>🚚 Fast & Free Delivery within City Limit</li>
-      <li>🖨️ High-Quality Prints with Durable Materials</li>
-      <li>🎨 Custom Design Support for All Projects</li>
-    </ul>
-  </section>
+<section>
+  <h2>Why Choose Us</h2>
+  <ul class="services">
+    <li>🚚 Fast & Free Delivery within City Limit</li>
+    <li>🏆 High-Quality Prints with Durable Materials</li>
+    <li>🎨 Custom Design Support for All Projects</li>
+  </ul>
+</section>
 
-  <section>
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="https://imgur.com/6dJbKWN.png" alt="Flex Printing">
-        <label>Flex Printing</label>
-      </div>
-      <div class="gallery-item">
-        <img src="https://imgur.com/Uy2QVeH.png" alt="Vinyl Printing">
-        <label>Vinyl Printing</label>
-      </div>
-      <div class="gallery-item">
-        <img src="https://imgur.com/STqQmqA.png" alt="Clear Printing">
-        <label>Clear Printing</label>
-      </div>
-      <div class="gallery-item">
-        <img src="https://imgur.com/H70lmeX.png" alt="Reflective Flex and Vinyl Printing">
-        <label>Reflective Flex and Vinyl Printing</label>
-      </div>
-      <div class="gallery-item">
-        <img src="https://imgur.com/E4rXNob.png" alt="One Way Vision Vinyl Printing">
-        <label>One Way Vision Vinyl Printing</label>
-      </div>
-      <div class="gallery-item">
-        <img src="https://imgur.com/GeyVmxT.png" alt="Backlit Film Printing">
-        <label>Backlit Film Printing</label>
-      </div>
-      <div class="gallery-item">
-        <img src="https://imgur.com/TKrqhXT.png" alt="Sunpack Sheet Printing">
-        <label>Sunpack Sheet Printing</label>
-      </div>
-      <div class="gallery-item">
-        <img src="https://imgur.com/ffILX8W.png" alt="Foam Board Printing">
-        <label>Foam Board Printing</label>
-      </div>
-      <div class="gallery-item">
-        <img src="https://imgur.com/59lDmKC.png" alt="UV Printing Services">
-        <label>UV Printing Services</label>
-      </div>
-      <div class="gallery-item">
-        <img src="https://imgur.com/zsBQCXc.png" alt="Standee Banner">
-        <label>Standee Banner</label>
-      </div>
-      <div class="gallery-item">
-        <img src="https://imgur.com/GrGZT5x.png" alt="Frosted Vinyl Printing">
-        <label>Frosted Vinyl Printing</label>
-      </div>
-      <div class="gallery-item">
-        <img src="https://imgur.com/5guGqZf.png" alt="Photo Frame Services">
-        <label>Photo Frame Services</label>
-      </div>
-      <div class="gallery-item">
-        <img src="https://imgur.com/Xx74HPu.png" alt="Lamination Glossy Matte">
-        <label>Lamination - Glossy and Matte</label>
-      </div>
-    </div>
-  </section>
+<section>
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <div class="gallery-item"><img src="https://i.imgur.com/6dJbKWN.png" alt="Flex Printing"><label>Flex Printing</label></div>
+    <div class="gallery-item"><img src="https://i.imgur.com/Uy2QVeH.png" alt="Vinyl Printing"><label>Vinyl Printing</label></div>
+    <div class="gallery-item"><img src="https://i.imgur.com/STqQmqA.png" alt="Clear Printing"><label>Clear Printing</label></div>
+    <div class="gallery-item"><img src="https://i.imgur.com/H70lmeX.png" alt="Reflective Flex and Vinyl Printing"><label>Reflective Flex and Vinyl Printing</label></div>
+    <div class="gallery-item"><img src="https://i.imgur.com/E4rXNob.png" alt="One Way Vision Vinyl Printing"><label>One Way Vision Vinyl Printing</label></div>
+    <div class="gallery-item"><img src="https://i.imgur.com/GeyVmxT.png" alt="Backlit Film Printing"><label>Backlit Film Printing</label></div>
+    <div class="gallery-item"><img src="https://i.imgur.com/TKrqhXT.png" alt="Sunpack Sheet Printing"><label>Sunpack Sheet Printing</label></div>
+    <div class="gallery-item"><img src="https://i.imgur.com/ffILX8W.png" alt="Foam Board Printing"><label>Foam Board Printing</label></div>
+    <div class="gallery-item"><img src="https://i.imgur.com/59lDmKC.png" alt="UV Printing Services"><label>UV Printing Services</label></div>
+    <div class="gallery-item"><img src="https://i.imgur.com/zsBQCXc.png" alt="Standee Banner"><label>Standee Banner</label></div>
+    <div class="gallery-item"><img src="https://i.imgur.com/GrGZT5x.png" alt="Frosted Vinyl Printing"><label>Frosted Vinyl Printing</label></div>
+    <div class="gallery-item"><img src="https://i.imgur.com/5guGqZf.png" alt="Photo Frame Services"><label>Photo Frame Services</label></div>
+    <div class="gallery-item"><img src="https://i.imgur.com/Xx74HPu.png" alt="Lamination - Glossy and Matte"><label>Lamination - Glossy and Matte</label></div>
+  </div>
+</section>
 
-  <section class="qr-section">
-    <h2>Scan to Connect on WhatsApp</h2>
-    <img src="https://imgur.com/4DKqyAH.png" alt="WhatsApp QR Code">
-    <p><a href="https://wa.me/message/3QMRZWYXTUTLD1" target="_blank">Or click here to chat directly</a></p>
-  </section>
+<section class="qr-section">
+  <h2>Scan to Connect on WhatsApp</h2>
+  <img src="https://i.imgur.com/4DKqyAH.png" alt="WhatsApp QR Code">
+  <p><a href="https://wa.me/message/3QMRZWYXTUTLD1" target="_blank">Or click here to chat directly</a></p>
+</section>
 
-  <section class="enquiry">
-    <h2>Customer Enquiry</h2>
-    <a href="https://wa.me/message/3QMRZWYXTUTLD1" target="_blank">Message on WhatsApp</a>
-    <a href="mailto:signhousemdu@gmail.com">Send Email</a>
-  </section>
+<section class="enquiry">
+  <h2>Customer Enquiry</h2>
+  <a href="https://wa.me/message/3QMRZWYXTUTLD1" target="_blank">Message on WhatsApp</a>
+  <a href="mailto:signhousemdu@gmail.com">Send Email</a>
+</section>
 
-  <section>
-    <h2>Contact Us</h2>
-    <div class="contact-info">
-      <p><strong>Email:</strong> <a href="mailto:signhousemdu@gmail.com">signhousemdu@gmail.com</a></p>
-      <p><strong>Office Landline:</strong> <a href="tel:04524206419">0452 4206419</a></p>
-      <p><strong>Office Mobile:</strong> <a href="tel:8838956685">8838956685</a></p>
-      <p><strong>Phone:</strong> <a href="tel:8012920424">8012920424</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/message/3QMRZWYXTUTLD1">Chat Now</a></p>
-      <p><strong>Google Profile:</strong> <a href="https://g.co/kgs/SMRgoC5" target="_blank">View on Google</a></p>
-      <p><strong>Address:</strong> No.9/4, SR Nagar Street Last, Opp HP Petrol Bunk, Villapuram, Meenakshi Nagar, Madurai - 625012.</p>
-    </div>
-  </section>
+<section>
+  <h2>Contact Us</h2>
+  <div class="contact-info">
+    <p><strong>Email:</strong> <a href="mailto:signhousemdu@gmail.com">signhousemdu@gmail.com</a></p>
+    <p><strong>Office Landline:</strong> <a href="tel:04524206419">0452 4206419</a></p>
+    <p><strong>Office Mobile:</strong> <a href="tel:8838956685">8838956685</a></p>
+    <p><strong>Phone:</strong> <a href="tel:8012920424">8012920424</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/message/3QMRZWYXTUTLD1">Chat Now</a></p>
+    <p><strong>Address:</strong> No.9/4, SR Nagar Street Last, Opp HP Petrol Bunk, Villapuram, Meenakshi Nagar, Madurai - 625012.</p>
+    <p><a href="https://g.co/kgs/vSe67Se" target="_blank" style="color: #4fc3f7; font-weight: bold;">📍 View on Google Maps</a></p>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 SIGN HOUSE | All Rights Reserved</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 SIGN HOUSE | All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
